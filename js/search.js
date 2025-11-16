@@ -1,25 +1,40 @@
-function myFunction() {
-  // Declare variables
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName("li");
+/**
+ * Gallery Search Filter
+ * Filters gallery items based on caption text
+ */
 
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    if (a.getAttribute("data-caption").toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
+// Initialize search functionality when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.getElementById('searchInput');
+  const gallery = document.getElementById('gallery');
+  
+  if (searchInput && gallery) {
+    searchInput.addEventListener('input', filterGallery);
+    // Initialize filter on page load
+    filterGallery();
+  }
+});
+
+/**
+ * Filters gallery items based on search input
+ */
+function filterGallery() {
+  const searchInput = document.getElementById('searchInput');
+  const gallery = document.getElementById('gallery');
+  const galleryItems = gallery.querySelectorAll('li');
+  const filterText = searchInput.value.toUpperCase();
+  
+  galleryItems.forEach(item => {
+    const link = item.querySelector('a');
+    const caption = link.getAttribute('data-caption') || '';
+    const title = link.getAttribute('title') || '';
+    const searchableText = `${caption} ${title}`.toUpperCase();
+    
+    // Show item if search text matches caption or title, or if search is empty
+    if (filterText === '' || searchableText.includes(filterText)) {
+      item.style.display = '';
     } else {
-      li[i].style.display = "none";
+      item.style.display = 'none';
     }
-  }
-
-  // If the search input is empty, display all list items
-  if (input.value === "") {
-    ul.style.display = "";
-  }
+  });
 }
-
-myFunction();
