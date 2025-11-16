@@ -54,6 +54,11 @@ copyDir(path.join(__dirname, 'photos'), path.join(distDir, 'photos'));
 console.log('Copying baguettebox.js...');
 const baguetteboxSrc = path.join(__dirname, 'node_modules', 'baguettebox.js', 'dist');
 const baguetteboxDest = path.join(distDir, 'baguettebox');
+if (!fs.existsSync(baguetteboxSrc) || !fs.statSync(baguetteboxSrc).isDirectory()) {
+  console.error(`Error: baguettebox.js distribution directory not found at ${baguetteboxSrc}.`);
+  console.error('Please run "npm install" to install dependencies before building.');
+  process.exit(1);
+}
 copyDir(baguetteboxSrc, baguetteboxDest);
 
 // Process HTML file
