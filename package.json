@@ -1,22 +1,37 @@
 {
-  "name": "techdegree-project-5",
+  "name": "interactive-image-gallery-js",
   "version": "1.0.0",
-  "description": "Techdegree Project 5",
-  "main": "index.js",
+  "description": "An interactive photo gallery with search functionality and lightbox viewing, built with vanilla JavaScript",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx http-server -p 8080 -o",
+    "build": "node build.js",
+    "test": "echo \"No tests specified\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bwalkerwebdev/techdegree-project-5.git"
+    "url": "git+https://github.com/brianwalkerdev/interactive-image-gallery-js.git"
   },
-  "author": "Brian Walker",
-  "license": "ISC",
+  "keywords": [
+    "javascript",
+    "photo-gallery",
+    "image-gallery",
+    "lightbox",
+    "responsive",
+    "vanilla-js",
+    "search",
+    "filter",
+    "web-app",
+    "frontend"
+  ],
+  "author": "Brian Walker <brianwalkerdev@users.noreply.github.com> (https://brianwalker.dev)",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bwalkerwebdev/techdegree-project-5/issues"
+    "url": "https://github.com/brianwalkerdev/interactive-image-gallery-js/issues"
   },
-  "homepage": "https://github.com/bwalkerwebdev/techdegree-project-5#readme",
+  "homepage": "https://github.com/brianwalkerdev/interactive-image-gallery-js#readme",
   "dependencies": {
     "baguettebox.js": "^1.11.1"
-  }
+  },
+  "devDependencies": {}
 }
