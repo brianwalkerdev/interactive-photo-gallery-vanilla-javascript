@@ -1,6 +1,6 @@
 /**
  * Gallery Search Filter
- * Filters gallery items based on caption text
+ * Filters gallery items based on caption and title text
  */
 
 // Initialize search functionality when DOM is ready
