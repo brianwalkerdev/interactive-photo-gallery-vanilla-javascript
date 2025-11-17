@@ -14,11 +14,10 @@
     />
     <link
       rel="stylesheet"
-      href="node_modules/baguettebox.js/dist/baguetteBox.min.css"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
     <script
-      src="node_modules/baguettebox.js/dist/baguetteBox.min.js"
-      async
+      src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"
     ></script>
     <title>Interactive Photo Gallery | JavaScript Image Viewer</title>
   </head>
@@ -40,7 +39,7 @@
         <li>
           <a
             href="photos/01.jpg"
-            title="Hay Bales"
+            data-fancybox="gallery"
             data-caption="I love hay bales. Took this snap on a drive through the countryside past some straw fields."
             ><img src="photos/thumbnails/01.jpg" alt="Hay Bales"
           /></a>
@@ -48,7 +47,7 @@
         <li>
           <a
             href="photos/02.jpg"
-            title="Lake"
+            data-fancybox="gallery"
             data-caption="The lake was so calm today. We had a great view of the snow on the mountains from here."
             ><img src="photos/thumbnails/02.jpg" alt="Lake"
           /></a>
@@ -56,7 +55,7 @@
         <li>
           <a
             href="photos/03.jpg"
-            title="Canyon"
+            data-fancybox="gallery"
             data-caption="I hiked to the top of the mountain and got this picture of the canyon and trees below."
             ><img src="photos/thumbnails/03.jpg" alt="Canyon"
           /></a>
@@ -64,7 +63,7 @@
         <li>
           <a
             href="photos/04.jpg"
-            title="Iceberg"
+            data-fancybox="gallery"
             data-caption="It was amazing to see an iceberg up close, it was so cold but didn’t snow today. "
             ><img src="photos/thumbnails/04.jpg" alt="Iceberg"
           /></a>
@@ -72,7 +71,7 @@
         <li>
           <a
             href="photos/05.jpg"
-            title="Desert"
+            data-fancybox="gallery"
             data-caption="The red cliffs were beautiful. It was really hot in the desert but we did a lot of walking through the canyons."
             ><img src="photos/thumbnails/05.jpg" alt="Desert"
           /></a>
@@ -80,7 +79,7 @@
         <li>
           <a
             href="photos/06.jpg"
-            title="Fall"
+            data-fancybox="gallery"
             data-caption="Fall is coming, I love when the leaves on the trees start to change color."
             ><img src="photos/thumbnails/06.jpg" alt="Fall"
           /></a>
@@ -88,7 +87,7 @@
         <li>
           <a
             href="photos/07.jpg"
-            title="Plantation"
+            data-fancybox="gallery"
             data-caption="I drove past this plantation yesterday, everything is so green!"
             ><img
               src="photos/thumbnails/07.jpg"
@@ -98,7 +97,7 @@
         <li>
           <a
             href="photos/08.jpg"
-            title="Dunes"
+            data-fancybox="gallery"
             data-caption="My summer vacation to the Oregon Coast. I love the sandy dunes!"
             ><img src="photos/thumbnails/08.jpg" alt="Dunes"
           /></a>
@@ -106,7 +105,7 @@
         <li>
           <a
             href="photos/09.jpg"
-            title="Countryside Lane"
+            data-fancybox="gallery"
             data-caption="We enjoyed a quiet stroll down this countryside lane."
             ><img
               src="photos/thumbnails/09.jpg"
@@ -116,7 +115,7 @@
         <li>
           <a
             href="photos/10.jpg"
-            title="Sunset"
+            data-fancybox="gallery"
             data-caption="Sunset at the coast! The sky turned a lovely shade of orange."
             ><img src="photos/thumbnails/10.jpg" alt="Sunset"
           /></a>
@@ -124,7 +123,7 @@
         <li>
           <a
             href="photos/11.jpg"
-            title="Cave"
+            data-fancybox="gallery"
             data-caption="I did a tour of a cave today and the view of the landscape below was breathtaking."
             ><img src="photos/thumbnails/11.jpg" alt="Cave"
           /></a>
@@ -132,7 +131,7 @@
         <li>
           <a
             href="photos/12.jpg"
-            title="Bluebells"
+            data-fancybox="gallery"
             data-caption="I walked through this meadow of bluebells and got a good view of the snow on the mountain before the fog came in."
             ><img src="photos/thumbnails/12.jpg" alt="Bluebells"
           /></a>
@@ -140,9 +139,8 @@
       </ul>
     </main>
     <script>
-      window.addEventListener("load", function () {
-        baguetteBox.run(".gallery");
-      });
+      // Fancybox automatically binds to all elements with data-fancybox attribute
+      // No additional initialization needed
     </script>
     <script src="js/search.js"></script>
   </body>

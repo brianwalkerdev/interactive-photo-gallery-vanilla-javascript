@@ -50,27 +50,8 @@ copyDir(path.join(__dirname, 'css'), path.join(distDir, 'css'));
 copyDir(path.join(__dirname, 'js'), path.join(distDir, 'js'));
 copyDir(path.join(__dirname, 'photos'), path.join(distDir, 'photos'));
 
-// Copy baguettebox.js files
-console.log('Copying baguettebox.js...');
-const baguetteboxSrc = path.join(__dirname, 'node_modules', 'baguettebox.js', 'dist');
-const baguetteboxDest = path.join(distDir, 'baguettebox');
-if (!fs.existsSync(baguetteboxSrc) || !fs.statSync(baguetteboxSrc).isDirectory()) {
-  console.error(`Error: baguettebox.js distribution directory not found at ${baguetteboxSrc}.`);
-  console.error('Please run "npm install" to install dependencies before building.');
-  process.exit(1);
-}
-copyDir(baguetteboxSrc, baguetteboxDest);
-
-// Process HTML file
-console.log('Processing index.html...');
-let html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
-
-// Update baguettebox references for production
-html = html.replace(
-  /node_modules\/baguettebox\.js\/dist\//g,
-  'baguettebox/'
-);
-
-fs.writeFileSync(path.join(distDir, 'index.html'), html);
+// Copy HTML file (no processing needed since we're using CDN)
+console.log('Copying index.html...');
+fs.copyFileSync(path.join(__dirname, 'index.html'), path.join(distDir, 'index.html'));
 
 console.log('Build complete! Output is in dist/ directory');

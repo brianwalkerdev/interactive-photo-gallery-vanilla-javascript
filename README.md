@@ -24,7 +24,7 @@ An elegant photo gallery showcasing 12 landscape images with instant search filt
 - **HTML5** – Semantic markup with accessibility features
 - **CSS3** – Responsive Grid layout with modern styling
 - **JavaScript (ES6+)** – Vanilla JS with DOM manipulation
-- **BaguetteBox.js** – Lightweight lightbox library
+- **Fancybox** – Modern lightbox library via CDN
 
 ## 🚀 Installation & Usage
 
