@@ -110,9 +110,17 @@ class Lightbox {
     imgElement.src = image.src;
     imgElement.alt = image.title;
     
-    // Display both title and caption
-    const captionText = image.caption ? `<strong>${image.title}</strong><br>${image.caption}` : image.title;
-    captionElement.innerHTML = captionText;
+    // Display both title and caption, safely
+    captionElement.innerHTML = '';
+    if (image.caption) {
+      const titleElement = document.createElement('strong');
+      titleElement.textContent = image.title;
+      captionElement.appendChild(titleElement);
+      captionElement.appendChild(document.createElement('br'));
+      captionElement.appendChild(document.createTextNode(image.caption));
+    } else {
+      captionElement.textContent = image.title;
+    }
   }
 }
 
