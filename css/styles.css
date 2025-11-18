@@ -221,9 +221,8 @@ header {
 .lightbox-caption strong {
   font-size: 1.25rem;
   font-weight: 600;
-  display: inline-block;
-  margin-bottom: 0;
-  margin-right: 0.25rem;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 
 .lightbox-close,

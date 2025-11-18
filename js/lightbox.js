@@ -116,7 +116,8 @@ class Lightbox {
       const titleElement = document.createElement('strong');
       titleElement.textContent = image.title;
       captionElement.appendChild(titleElement);
-      captionElement.appendChild(document.createTextNode(' ' + image.caption));
+      captionElement.appendChild(document.createElement('br'));
+      captionElement.appendChild(document.createTextNode(image.caption));
     } else {
       captionElement.textContent = image.title;
     }
