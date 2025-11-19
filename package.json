@@ -1,7 +1,7 @@
 {
-  "name": "interactive-image-gallery-js",
+  "name": "interactive-photo-gallery-vanilla-javascript",
   "version": "1.0.0",
-  "description": "An interactive photo gallery with search functionality and lightbox viewing, built with vanilla JavaScript",
+  "description": "An interactive photo gallery with real-time search and lightbox viewing, built with vanilla JavaScript. Features responsive design, keyboard navigation, and accessibility support.",
   "main": "index.html",
   "scripts": {
     "start": "npx http-server -p 8080 -o",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brianwalkerdev/interactive-image-gallery-js.git"
+    "url": "git+https://github.com/brianwalkerdev/interactive-photo-gallery-vanilla-javascript.git"
   },
   "keywords": [
     "javascript",
@@ -22,13 +22,17 @@
     "search",
     "filter",
     "web-app",
-    "frontend"
+    "frontend",
+    "portfolio",
+    "css-grid",
+    "accessibility",
+    "keyboard-navigation"
   ],
   "author": "Brian Walker <brianwalkerdev@users.noreply.github.com> (https://brianwalker.dev)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/brianwalkerdev/interactive-image-gallery-js/issues"
+    "url": "https://github.com/brianwalkerdev/interactive-photo-gallery-vanilla-javascript/issues"
   },
-  "homepage": "https://github.com/brianwalkerdev/interactive-image-gallery-js#readme",
+  "homepage": "https://brianwalkerdev.github.io/interactive-photo-gallery-vanilla-javascript/",
   "devDependencies": {}
 }

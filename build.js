@@ -1,7 +1,16 @@
 #!/usr/bin/env node
 
 /**
- * Build script for creating a production-ready static site
+ * Build Script for Interactive Photo Gallery
+ * 
+ * Creates a production-ready static site by copying all necessary files
+ * to the dist/ directory. The output is ready for deployment to any
+ * static hosting platform (Netlify, Vercel, GitHub Pages, etc.)
+ * 
+ * Usage: npm run build
+ * Output: dist/ directory
+ * 
+ * @author Brian Walker
  */
 
 const fs = require('fs');
