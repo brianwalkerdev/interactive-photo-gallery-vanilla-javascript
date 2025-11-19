@@ -20,7 +20,7 @@ A responsive photo gallery with real-time search and lightbox viewing. Built wit
 - **HTML5** – Semantic markup with ARIA labels for accessibility
 - **CSS3** – CSS Grid layout, Flexbox, custom properties, and smooth animations
 - **JavaScript (ES6+)** – Vanilla JS with class-based architecture and modern DOM APIs
-- **No frameworks or libraries** – Pure vanilla JavaScript implementation
+- **No frameworks or libraries** – In transition from Fancybox to pure vanilla JavaScript implementation
 
 ## 📦 Installation & Usage
 
