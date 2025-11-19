@@ -1,6 +1,14 @@
 /**
  * Gallery Search Filter
- * Filters gallery items based on caption and title text
+ * 
+ * Provides real-time search functionality for the photo gallery.
+ * Filters gallery items based on matching text in captions and titles.
+ * 
+ * Features:
+ * - Case-insensitive search
+ * - Real-time filtering as user types
+ * - Searches both image titles and captions
+ * - Smooth display transitions via CSS
  */
 
 // Initialize search functionality when DOM is ready
@@ -9,14 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const gallery = document.getElementById('gallery');
   
   if (searchInput && gallery) {
+    // Listen for input changes and filter gallery
     searchInput.addEventListener('input', filterGallery);
-    // Initialize filter on page load
+    // Initialize filter on page load (shows all items)
     filterGallery();
   }
 });
 
 /**
- * Filters gallery items based on search input
+ * Filter gallery items based on search input value
+ * 
+ * Compares the search query against each image's caption and title.
+ * Items that don't match are hidden, matching items remain visible.
+ * Empty search query displays all items.
  */
 function filterGallery() {
   const searchInput = document.getElementById('searchInput');
