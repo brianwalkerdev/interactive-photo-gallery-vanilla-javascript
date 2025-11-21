@@ -4,7 +4,7 @@ A responsive photo gallery with real-time search and lightbox viewing. Built wit
 
 ![Interactive Photo Gallery](thumbnail.png)
 
-**[🚀 View Live Demo](https://brianwalkerdev.github.io/interactive-photo-gallery-vanilla-javascript/)**
+**[🚀 View Live Demo](https://projects.brianwalker.dev/interactive-photo-gallery-vanilla-javascript/)**
 
 ## ✨ Features
 
